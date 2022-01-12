@@ -12,55 +12,57 @@ class Team:
         self.points = pts
         self.team = T
 
-    def get_team(self): #getter function to get team
+    #getter function to get the values
+    def get_team(self): 
         return self.team
-    def set_team(self,T): # setter function to set team
-        self.team = T 
-    def get_played(self): # getter function to get played
+    def get_played(self): 
         return self.played
-    def set_played(self,P): # setter function to set played
-        self.played = P
-    def get_win(self): # getter function to get win
+    def get_win(self): 
         return self.win
-    def set_win(self,W): # setter function to set 
-        self.win = W
-    def get_loss(self): # getter function to get loss
+    def get_loss(self): 
         return self.loss
-    def set_loss(self,L): # setter function to set loss
-        self.loss = L
-    def get_draw(self): # getter function to get draw
+    def get_draw(self): 
         return self.draw
-    def set_draw(self,D): # setter function to set draw
-        self.draw = D
-    def get_front(self): # getter function to get front
+    def get_front(self): 
         return self.front
-    def set_front(self,F): # setter function to set front
-        self.front = F
-    def get_against(self): # getter function to get against
+    def get_against(self): 
         return self.against
-    def set_aganst(self,A): # setter function to set against
-        self.against = A
-    def get_diff(self): # getter function to get difference
+    def get_diff(self): 
         return self.difference
-    def set_diff(self,diff): # setter function to set difference
-        self.difference = diff
-    def get_points(self): # getter function to get points
+    def get_points(self):
         return self.points
-    def set_points(self,pts): # setter function to set points
+
+    # setter function to set the values
+    def set_team(self,T): 
+        self.team = T 
+    def set_played(self,P): 
+        self.played = P
+    def set_win(self,W):  
+        self.win = W
+    def set_loss(self,L): 
+        self.loss = L
+    def set_draw(self,D): 
+        self.draw = D
+    def set_front(self,F): 
+        self.front = F
+    def set_aganst(self,A): 
+        self.against = A
+    def set_diff(self,diff): 
+        self.difference = diff
+    def set_points(self,pts):
         self.points = pts
-    
 
-    def set_score(self,F,A): 
+    def set_score(self,frnt,agnst): 
         """This function receive the value of Front and Against and calculate the value. Then it is passed to set and get function."""
-        self.set_front(self.get_front()+F)
-        self.set_aganst(self.get_against()+A)
+        self.set_front(self.get_front()+frnt)
+        self.set_aganst(self.get_against()+agnst)
         self.set_played(self.get_played()+1)
-        self.set_diff(self.get_diff()+(F-A))
+        self.set_diff(self.get_diff()+(frnt-agnst))
 
-        if F > A:
+        if frnt > agnst:
             self.set_win(self.get_win()+1)
             self.set_points(self.get_points()+3)
-        elif F < A:
+        elif frnt < agnst:
             self.set_loss(self.get_loss()+1)
         else:
             self.set_draw(self.get_draw()+1)

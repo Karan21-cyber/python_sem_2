@@ -1,4 +1,4 @@
-import random # Ramdom module which is imported from the in-built modules
+import random # Random module which is imported from the in-built modules
 
 def intro():
     """This function an intro and ask the user to input the email."""
@@ -31,7 +31,7 @@ def chat_bot(user):
     print("\nHi, {}! Thank you, and Welcome to PopChat!".format(user))
     print("My name is {}, and it will be my pleasure to help you.".format(random.choice(rand_name)))
 
-    if random.choice(rand_num) == 0: # It check the internet connection if the value is 0 there is network error
+    if random.choice(rand_num) <= 2: # It check the internet connection if the value <= 2 then there is network error
         print("\n\t*****NETWORK ERROR*****\n")
     else:  # If the value is more or equal to 1 then it execute
         while True:  # This will loop the code
@@ -45,24 +45,24 @@ def chat_bot(user):
 def answer(question):
     """This function receive the question and check the condition and provide the answer accordig to questions."""
     my_list = ["library","wifi","deadline","coffee","hungry","fee","college","bored","teacher"]
-    
-    if my_list[0] in question:  #it check library is in the question or not
+    # it checks the condition and print the statements 
+    if my_list[0] in question:  
         print("The library is closed today.")
-    elif my_list[1] in question:  #it check wifi is in the question or not
+    elif my_list[1] in question:  
         print("WiFi is excellent across the campus.")
-    elif my_list[2] in question:  #it check deadline is in the question or not
+    elif my_list[2] in question:  
         print("Your deadline has been extended by two working days.")
-    elif my_list[3] in question:  #it check coffee is in the question or not
+    elif my_list[3] in question:  
         print("Teekee is open until 9pm this evening.")
-    elif my_list[4] in question: #it check hungry is in the question or not
+    elif my_list[4] in question: 
         print("The campus cafe is open 24 hrs.")
-    elif my_list[5] in question:   #it check fee is in the question or not
+    elif my_list[5] in question:   
         print("You can consult to the administration department.")
-    elif my_list[6] in question:   #it check college is in the question or not
+    elif my_list[6] in question:   
         print("The college open from 7am to 7pm.")
-    elif my_list[7] in question:   #it check bored is in the question or not
+    elif my_list[7] in question:   
         print("You can listen some music. Or you can go out for walk.")
-    elif my_list[8] in question:    #it check teacher is in the question or not
+    elif my_list[8] in question:   
         print("Teachers are professional and friendly.")
     else:     #it check if the question doesnot match it returns randomly
         lol = ["Hmmm","Oh","yes","I see","Tell me more","Like"]
