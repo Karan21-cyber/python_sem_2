@@ -32,8 +32,8 @@ try: #Try is used to check the program runs or not. If runs it executed else ret
         
         for x in range(len(MPH)): #This loop is used for adding the value inside the list
             sum += MPH[x]
-        avgmile = sum/len(MPH)
-        avgkm = avgmile * 1.61
+        avg_mile = sum/len(MPH)
+        avg_km = avg_mile * 1.61
 
         print("\nResult Summary\n")
         if len(MPH) == 1: # It check count that is equal to 2 or not. 
@@ -43,7 +43,7 @@ try: #Try is used to check the program runs or not. If runs it executed else ret
 
         print("Max Speed: {:.1f} MPH, {:.1f} KPH.".format(maxdata,convertmax))
         print("Min Speed: {:.1f} MPH, {:.1f} KPH.".format(mindata,convertmin))
-        print("Avg Speed: {:.1f} MPH, {:.1f} KPH.\n".format(avgmile,avgkm))
+        print("Avg Speed: {:.1f} MPH, {:.1f} KPH.\n".format(avg_mile,avg_km))
     
 except: # If the program has error then it prints
     print("Your input is wrong! Try Again!!")

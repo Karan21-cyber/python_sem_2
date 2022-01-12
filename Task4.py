@@ -31,7 +31,7 @@ class Team:
         return self.difference
     def get_points(self):
         return self.points
-
+        
     # setter function to set the values
     def set_team(self,T): 
         self.team = T 

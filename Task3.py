@@ -7,9 +7,9 @@ def intro():
     if email == "":  #If the email is not provided the it exit the program 
         print("No E-mail entered. Nothing to do.\n")
     else:  # If the email is provided it call the Email function by passing two parameters email and domain 
-        Email(email,domain="@pop.ac.uk")
+        email(email,domain="@pop.ac.uk")
 
-def Email(mail,domain):
+def email(mail,domain):
     """This function receive the mail and domain from the above. It will check the entered email is valid or not."""
     if "@" in mail[:3]:  # It checks if "@" comes before the length 3 the email is invalid
         print("Invalid E-mail!")

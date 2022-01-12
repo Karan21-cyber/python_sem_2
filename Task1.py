@@ -11,7 +11,7 @@ try: #Try is used to check the program runs or not. If runs it executed else ret
 
         if pass_name[1].lower() not in quest and pass_name[1] not in quest: # IT checks that "grail" is in the quest or not. 
             print("\nOnly those who seek the Grail may pass.\n")
-        
+            
         else: # It execute if the 2nd conditon match.
             color = input("What is your favourite color? ")
             if color[0].capitalize() == name[0].capitalize():  # It checks the First character of the color and name and match.
